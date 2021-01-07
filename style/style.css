@@ -13,6 +13,7 @@ ul.topnav {
   padding: 0;
   overflow: hidden;
   background-color: #f2f2f7;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 ul.topnav li {float: left;}
@@ -51,6 +52,7 @@ padding:0 16px;
     padding: 0;
     overflow: hidden;
     background-color: #1c1c1e;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   
   ul.topnav li {float: left;}
