@@ -1,7 +1,7 @@
 * {
-    box-sizing: border-box;
-  }
-  
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -16,7 +16,9 @@ ul.topnav {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-ul.topnav li {float: left;}
+ul.topnav li {
+  float: left;
+}
 
 ul.topnav li a {
   display: block;
@@ -26,33 +28,54 @@ ul.topnav li a {
   text-decoration: none;
 }
 
-ul.topnav li a:hover:not(.active) {background-color: #1c1c1e; color: #f2f2f7;}
-
-ul.topnav li a.active {background-color: #007AFF; color: #f2f2f7}
-
-ul.topnav li.right {float: right;}
-
-div.content {
-padding:0 16px;
+ul.topnav li a:hover:not(.active) {
+  background-color: #1c1c1e;
+  color: #f2f2f7;
 }
 
-div.project-card {
+ul.topnav li a.active {
+  background-color: #007AFF;
+  color: #f2f2f7
+}
+
+ul.topnav li.right {
+  float: right;
+}
+
+div.content {
+  padding: 0 16px;
+}
+
+div.content div.card {
   width: 250px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.3s;
   text-align: center;
 }
 
-div.project-card_txt {
-  padding: 10px;
+div.content div.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.content div.card div.container {
+  padding: 2px 16px;
   color: #1c1c1e
 }
 
-@media screen and (max-width: 600px) {
-  ul.topnav li.right, 
-  ul.topnav li {float: none;}
+#cydia-gradient {
+  width: 250px;
+  height: 250px;
+  background-color: #794935;
+  background-image: linear-gradient(#ce9268, #794935);
 }
 
-@media screen and (prefers-color-scheme: dark) and (max-width: 600px){
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, ul.topnav li {
+    float: none;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) and (max-width: 600px) {
   body {
     background-color: #1c1c1e;
     color: #f2f2f7;
@@ -65,9 +88,9 @@ div.project-card_txt {
     background-color: #1c1c1e;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
-  
-  ul.topnav li {float: left;}
-  
+  ul.topnav li {
+    float: left;
+  }
   ul.topnav li a {
     display: block;
     color: white;
@@ -75,15 +98,18 @@ div.project-card_txt {
     padding: 14px 16px;
     text-decoration: none;
   }
-  
-  ul.topnav li a:hover:not(.active) {background-color: #f2f2f7; color: #1c1c1e;}
-  
-  ul.topnav li a.active {background-color: #0a84FF;}
-  
-  ul.topnav li.right {float: right;}
-  
+  ul.topnav li a:hover:not(.active) {
+    background-color: #f2f2f7;
+    color: #1c1c1e;
+  }
+  ul.topnav li a.active {
+    background-color: #0a84FF;
+  }
+  ul.topnav li.right {
+    float: right;
+  }
   div.content {
-  padding:0 16px;
+    padding: 0 16px;
   }
 }
 
@@ -100,9 +126,9 @@ div.project-card_txt {
     background-color: #1c1c1e;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
-  
-  ul.topnav li {float: left;}
-  
+  ul.topnav li {
+    float: left;
+  }
   ul.topnav li a {
     display: block;
     color: white;
@@ -110,14 +136,36 @@ div.project-card_txt {
     padding: 14px 16px;
     text-decoration: none;
   }
-  
-  ul.topnav li a:hover:not(.active) {background-color: #f2f2f7; color: #1c1c1e;}
-  
-  ul.topnav li a.active {background-color: #0a84FF;}
-  
-  ul.topnav li.right {float: right;}
-  
+  ul.topnav li a:hover:not(.active) {
+    background-color: #f2f2f7;
+    color: #1c1c1e;
+  }
+  ul.topnav li a.active {
+    background-color: #0a84FF;
+  }
+  ul.topnav li.right {
+    float: right;
+  }
   div.content {
-  padding:0 16px;
+    padding: 0 16px;
+  }
+  div.content div.card {
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+  }
+  div.content div.card div.header {
+    height: 250px;
+    color: white;
+    padding: 10px;
+    font-size: 40px;
+    background-image: linear-gradient(#ce9268, #794935);
+  }
+  div.content div.card div.header h1 a {
+    color: white;
+  }
+  div.content div.card div.container {
+    padding: 10px;
+    color: #f2f2f7
   }
 }
