@@ -36,9 +36,55 @@ div.content {
 padding:0 16px;
 }
 
+div.project-card {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+div.project-card_txt {
+  padding: 10px;
+  color: #1c1c1e
+}
+
 @media screen and (max-width: 600px) {
   ul.topnav li.right, 
   ul.topnav li {float: none;}
+}
+
+@media screen and (prefers-color-scheme: dark) and (max-width: 600px){
+  body {
+    background-color: #1c1c1e;
+    color: #f2f2f7;
+  }
+  ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1c1c1e;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  ul.topnav li {float: left;}
+  
+  ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  ul.topnav li a:hover:not(.active) {background-color: #f2f2f7; color: #1c1c1e;}
+  
+  ul.topnav li a.active {background-color: #0a84FF;}
+  
+  ul.topnav li.right {float: right;}
+  
+  div.content {
+  padding:0 16px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
