@@ -2,123 +2,70 @@
     box-sizing: border-box;
   }
   
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  }
-  
-  /* Style the side navigation */
-  ul.sidebar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 25%;
-    background-color: #f2f2f7;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-  }
-  
-  /* Side navigation links */
-  ul.sidebar li a {
-    color: #007AFF;
-    padding: 8px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  ul.sidebar li a.active {
-    color: #f2f2f7;
-    background-color: #1c1c1e;
-  }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
 
-  /* Change color on hover */
-  ul.sidebar li a:hover {
-    background-color: #1C1C1E;
-    color: #0A84FF;
-  }
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #f2f2f7;
+}
 
-  ul.sidebar li a:hover:not(.active) {
-    background-color: #1C1C1E;
-    color: #0A84FF;
-  }
+ul.topnav li {float: left;}
 
-  /* Style the content */
-  div.content {
-    margin-left: 25%;
-    padding: 1px 16px;
-    height: 1000px;
-  }
+ul.topnav li a {
+  display: block;
+  color: #1c1c1e;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
-@media screen and (max-width: 900px) {
-  ul.sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-    
-  ul.sidebar li a {
-    float: left;
-    padding: 15px;
-  }
-    
-  div.content {margin-left: 0;}
-} 
+ul.topnav li a:hover:not(.active) {background-color: #1c1c1e; color: #f2f2f7;}
 
-@media screen and (max-width: 400px) {
-  ul.sidebar li a {
-    text-align: center;
-    float: none;
-  }
+ul.topnav li a.active {background-color: #007AFF; color: #f2f2f7}
+
+ul.topnav li.right {float: right;}
+
+div.content {
+padding:0 16px;
+}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
 }
 
 @media (prefers-color-scheme: dark) {
-  body {
-  background-color: #1c1c1e;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  }
-  
-  /* Style the side navigation */
-  ul.sidebar {
+  ul.topnav {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 25%;
+    overflow: hidden;
     background-color: #1c1c1e;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
   }
   
-  /* Side navigation links */
-  ul.sidebar li a {
-    color: #0A84FF;
-    padding: 8px 16px;
-    text-decoration: none;
+  ul.topnav li {float: left;}
+  
+  ul.topnav li a {
     display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
   }
   
-  ul.sidebar li a.active {
-    color: #1C1C1E;
-    background-color: #F2F2F7;
-  }
+  ul.topnav li a:hover:not(.active) {background-color: #f2f2f7; color: #1c1c1e;}
   
-  /* Change color on hover */
-  ul.sidebar li a:hover {
-    background-color: #f2f2f7;
-    color: #007aFF;
-  }
+  ul.topnav li a.active {background-color: #0a84FF;}
   
-  ul.sidebar li a:hover:not(.active) {
-    background-color: #f2f2f7;
-    color: #007AFF;
-  }
+  ul.topnav li.right {float: right;}
   
-  /* Style the content */
   div.content {
-    margin-left: 25%;
-    padding: 1px 16px;
-    height: 1000px;
+  padding:0 16px;
   }
 }
