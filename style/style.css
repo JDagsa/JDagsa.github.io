@@ -62,6 +62,11 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1c1c1e;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  }
   .content {
     margin-left: 200px;
     padding-left: 20px;
@@ -69,7 +74,7 @@
     color: #F2F2F7;
   }
   ul.sidebar li a:hover {
-    background-color: #1C1C1E;
+    background-color: #F2F2F7;
     color: #0A84FF;
   }
   ul.sidebar li a {
