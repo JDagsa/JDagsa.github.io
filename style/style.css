@@ -13,7 +13,7 @@
     margin: 0;
     padding: 0;
     width: 25%;
-    background-color: white;
+    background-color: #f2f2f7;
     position: fixed;
     height: 100%;
     overflow: auto;
@@ -27,16 +27,27 @@
     display: block;
   }
   
+  ul.sidebar li a.active {
+    color: #f2f2f7;
+    background-color: #1c1c1e;
+  }
+
   /* Change color on hover */
   ul.sidebar li a:hover {
     background-color: #1C1C1E;
-    color: #007AFF;
+    color: #0A84FF;
   }
-  
+
+  ul.sidebar li a:hover:not(.active) {
+    background-color: #1C1C1E;
+    color: #0A84FF;
+  }
+
   /* Style the content */
-  .content {
-    margin-left: 200px;
-    padding-left: 20px;
+  div.content {
+    margin-left: 25%;
+    padding: 1px 16px;
+    height: 1000px;
   }
 
 @media screen and (max-width: 900px) {
@@ -63,35 +74,51 @@
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #1c1c1e;
+  background-color: #1c1c1e;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
+  /* Style the side navigation */
+  ul.sidebar {
+    list-style-type: none;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  }
-  .content {
-    margin-left: 200px;
-    padding-left: 20px;
+    padding: 0;
+    width: 25%;
     background-color: #1c1c1e;
-    color: #F2F2F7;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
   }
-  ul.sidebar li a:hover {
-    background-color: #F2F2F7;
-    color: #0A84FF;
-  }
+  
+  /* Side navigation links */
   ul.sidebar li a {
     color: #0A84FF;
     padding: 8px 16px;
     text-decoration: none;
     display: block;
   }
-
-  ul.sidebar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 25%;
-    background-color: #1C1C1E;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
+  
+  ul.sidebar li a.active {
+    color: #1C1C1E;
+    background-color: #F2F2F7;
+  }
+  
+  /* Change color on hover */
+  ul.sidebar li a:hover {
+    background-color: #f2f2f7;
+    color: #007aFF;
+  }
+  
+  ul.sidebar li a:hover:not(.active) {
+    background-color: #f2f2f7;
+    color: #007AFF;
+  }
+  
+  /* Style the content */
+  div.content {
+    margin-left: 25%;
+    padding: 1px 16px;
+    height: 1000px;
   }
 }
