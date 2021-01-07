@@ -41,6 +41,10 @@ padding:0 16px;
 }
 
 @media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1c1c1e;
+    color: #f2f2f7;
+  }
   ul.topnav {
     list-style-type: none;
     margin: 0;
